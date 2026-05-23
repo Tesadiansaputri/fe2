@@ -25,6 +25,8 @@ import AuthLayout from "./layout/AuthLayout";
 import DashboardLayout from "./layout/DashboardLayout";
 
 import ProtectedRoute from "./pages/route/ProtectedRoute";
+import { EventEdit } from "./pages/event/EventEdit";
+import { PembicaraEdit } from "./pages/pembicara/PembicaraEdit";
 
 function App() {
   return (
@@ -62,10 +64,13 @@ function App() {
             {/* URL: /dashboard/event */}
             <Route path="event" element={<EventIndex />} />
             <Route path="event/create" element={<EventCreate />} />
+            <Route path="event/edit/:id" element={<EventEdit />} />
+            
 
             {/* URL: /dashboard/pembicara */}
             <Route path="pembicara" element={<PembicaraIndex />} />
             <Route path="pembicara/create" element={<PembicaraCreate />} />
+            <Route path="pembicara/edit/:id" element={<PembicaraEdit />} />
 
             {/* OPSI 2: Menu Biodata di dalam Dashboard - URL: /dashboard/biodata */}
             <Route path="biodata" element={<Biodata />} />
