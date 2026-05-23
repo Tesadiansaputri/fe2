@@ -68,7 +68,7 @@ export const useAuthStore = create<AuthState>()(
       login: async (email, password) => {
         try {
           // Sesuai dengan rute di backend Anda (tanpa /api)
-        const response = await fetch(`${API_URL}/auth/Login`, {
+        const response = await fetch(`${API_URL}/auth/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nim: email, password }),
