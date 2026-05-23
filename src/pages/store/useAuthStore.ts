@@ -67,7 +67,8 @@ export const useAuthStore = create<AuthState>()(
       // ================= FUNGSI LOGIN & LOGOUT MANUAL =================
       login: async (email, password) => {
         try {
-          const response = await fetch(`${API_URL}/api/auth/Login`, {
+          // Sesuai dengan rute di backend Anda (tanpa /api)
+        const response = await fetch(`${API_URL}/auth/Login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nim: email, password }),
