@@ -52,7 +52,7 @@ interface AuthState {
   deleteEvent: (id: string) => Promise<boolean>;
 }
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://be2-inky.vercel.app"; // Ganti dengan URL backend jika berbeda
 
 export const useAuthStore = create<AuthState>()(
   persist(
